@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: vidraria-export
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      DB_DIR: /app/data
+    volumes:
+      - dados:/app/data      # persiste o arquivo SQLite entre reinicializações
+    restart: unless-stopped
+
+volumes:
+  dados:

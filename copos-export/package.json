@@ -1,0 +1,16 @@
+{
+  "name": "copos-export-backoffice",
+  "version": "1.1.0",
+  "description": "Back-office de exportação de copos de vidro",
+  "main": "src/server.js",
+  "scripts": {
+    "init-db": "node --disable-warning=ExperimentalWarning src/database/init.js",
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/server.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}
